@@ -10,7 +10,8 @@ const port = process.env.PORT || 5001
 //show where files are stored
 app.use(express.static('server/public'))
 
-let equations = ['test']
+let equations = [{equation:'test',
+answer:'test'}, ]
 
 app.get('/equations', (req, res)=>{
     res.send(equations)

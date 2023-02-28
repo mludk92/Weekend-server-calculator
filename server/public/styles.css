@@ -7,6 +7,7 @@ body{ margin: 0;
 header{
     font-size: 75px;
     text-align: center;
+    color:white;
 }
 input{
     display: grid;
@@ -44,9 +45,11 @@ grid-template-rows:repeat(5, 50px);
     display: grid;
 justify-content: center;
 align-items: center;
+color:white;
   }
 #outputDiv{
     font-size: 35px;
     padding-left: 100px;
+    color:white;
 }
 
