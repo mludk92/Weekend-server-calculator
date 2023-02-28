@@ -4,7 +4,6 @@ console.log('sourced in ')
 function divClick(event){
     console.log(' / ')
     document.querySelector('#viewer').value += '/'
-
 }
 function multClick(event){
     console.log(' * ')
@@ -108,11 +107,19 @@ button.addEventListener(
 
 console.log(document.querySelector('#viewer').value)
 
-let test = ['+']
+// am console logging the correct values of the equations added to the input now will need to set up server to do this. 
 
-console.log(test[0])
-
-// see a potental break for neg numbers since i am using spaces to split my operators 
-
-
-console.log(eval(input.value)) // this is the best way
+function getEquations() {
+    axios.get('/equations').then((response)=>{
+        console.log(response.data)
+        console.log(response.data[0])
+        for(let i in response.data){
+            let divElm = document.querySelector('#outputDiv')
+            divElm.innerHTML += `<br> ${Number(i)+1})  ${response.data}`
+            
+        }
+    }).catch((error)=>{
+        alert('something went wrong')
+    })
+}
+getEquations()

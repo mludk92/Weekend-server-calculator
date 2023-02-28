@@ -45,5 +45,8 @@ grid-template-rows:repeat(5, 50px);
 justify-content: center;
 align-items: center;
   }
-
+#outputDiv{
+    font-size: 35px;
+    padding-left: 100px;
+}
 
