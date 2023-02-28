@@ -55,7 +55,7 @@ function zeroClick(event)
 function dotClick(event)
 {
     console.log('.')
-    document.querySelector('#viewer').value += '0'
+    document.querySelector('#viewer').value += '.'
 }
 function plusClick(event)
 {
@@ -126,7 +126,7 @@ function equalClick(event)
     //document.querySelector('#viewer').value += '=' // will need this to send values to somewhare
     console.log(eval(document.querySelector('#viewer').value))
     let divElm = document.querySelector('#outputDiv')
-    divElm.innerHTML = ''
+    divElm.innerHTML = 'Previous Equations'
     let equat = document.querySelector('#viewer').value
     console.log(equat)
     let answer = ''
