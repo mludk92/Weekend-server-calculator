@@ -13,6 +13,8 @@ functionality
 4) after equal is pressed the answer as well as all previous answers are appended to the DOM for referance. 
 5) if the equation input is incorrect the app stops the post request and sends an alert to user ask to verify the input equation 
 6) after correct input the input field is cleared automatically 
+7) a clear history button which will delete the history from the server and clear the previous result so not loaded on refresh of page. 
+8) previous results can be click, and the equation clicked on will append back to the input field for reuse. 
 
 issues while building 
 1) wanted a clean layout for the buttons, used css grid to achieve this. 
