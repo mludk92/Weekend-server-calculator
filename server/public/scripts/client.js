@@ -138,3 +138,12 @@ function equalClick(event)
         getEquations()
     })
 }
+
+
+window.addEventListener("error", handleError, true);
+
+function handleError(evt) {
+    if (evt.message) { // Chrome sometimes provides this
+      alert("error: "+"Input is incorrect verify the equation is correct" );
+    } 
+}
