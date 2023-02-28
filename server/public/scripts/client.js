@@ -149,3 +149,8 @@ function handleError(evt) {
       alert("error: "+"Input is incorrect verify the equation is correct" );
     } 
 }
+
+function deleteClick(event)
+{
+axios.delete('/equations')
+    .then(() => document.querySelector('#outputDiv').innerHTML = 'History Cleared');}

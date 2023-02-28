@@ -29,14 +29,10 @@ app.get('/equations', (req, res)=>{
     console.log(equations)
   })
 
-
-
-
-
-
-
-
-
+app.delete('/equations', (req, res)=> {
+    equations = []
+    res.sendStatus(201)
+})
 
 
 //tell where to listen for request
