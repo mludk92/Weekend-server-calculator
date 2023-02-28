@@ -2,7 +2,7 @@
 const express = require('express')
 
 const app = express()
-
+app.use(express.json()); // not having this causes req.body to return undefined. 
 // Heroku assigns us a unique PORT 
 // use 5001 for local host devolopment 
 const port = process.env.PORT || 5001
@@ -18,11 +18,13 @@ app.get('/equations', (req, res)=>{
   })
 
 
-//   app.post('/equations',(req, res)=>{
-//     let jokeToAdd = req.body
-//     jokes.push(jokeToAdd)
-//     res.sendStatus(201)
-//   })
+  app.post('/equations',(req, res)=>{
+    let equationToAdd = req.body
+    console.log(equationToAdd, 'to add here')
+    equations.push(equationToAdd)
+    res.sendStatus(201)
+    console.log(equations)
+  })
 
 
 

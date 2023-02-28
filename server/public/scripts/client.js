@@ -60,14 +60,10 @@ function dotClick(event)
 function plusClick(event)
 {
     console.log(' + ')
-    document.querySelector('#viewer').value += '+'
+    document.querySelector('#viewer').value += ' + '
 }
-function equalClick(event)
-{
-    console.log('=')
-    //document.querySelector('#viewer').value += '=' // will need this to send values to somewhare
-    console.log(eval(document.querySelector('#viewer').value))
-}
+
+
 function clearClick(event)
 {
     console.log('clear')
@@ -123,3 +119,22 @@ function getEquations() {
     })
 }
 getEquations()
+
+function equalClick(event)
+{
+    console.log('=')
+    //document.querySelector('#viewer').value += '=' // will need this to send values to somewhare
+    console.log(eval(document.querySelector('#viewer').value))
+    let divElm = document.querySelector('#outputDiv')
+    divElm.innerHTML = ''
+    let equat = document.querySelector('#viewer').value
+    console.log(equat)
+    let answer = ''
+    let equationForServer = {equation: equat,
+    answer:answer,}
+    console.log(equationForServer)
+    console.log(equationForServer)
+    axios.post('/equations',equationForServer).then((response)=>{
+        getEquations()
+    })
+}
