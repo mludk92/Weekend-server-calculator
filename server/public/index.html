@@ -11,25 +11,26 @@
     <header> Server Side Calculator</header>
     <br>
     <br>
-    <input type="text"><br>
-    <button id="clear">CLEAR</button>
+    <input id="viewer"type="text"><br>
+    <button onClick="clearClick(event)" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'" id="clear">CLEAR</button>
     
     <div class="calculator-grid">       
-        <button>/</button>
-        <button>*</button>
-        <button>-</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>0</button>
-        <button>.</button>
-        <button>=</button>
+        <button onClick="divClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">/</button>
+        <button onClick="multClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">*</button>
+        <button onClick="minClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">-</button>
+        <button onClick="sevClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">7</button>
+        <button onClick="eightClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">8</button>
+        <button onClick="nineClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">9</button>
+        <button onClick="fourClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">4</button>
+        <button onClick="fiveClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">5</button>
+        <button onClick="sixClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">6</button>
+        <button onClick="oneClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">1</button>
+        <button onClick="twoClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">2</button>
+        <button onClick="threeClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">3</button>
+        <button onClick="zeroClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">0</button>
+        <button onClick="dotClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">.</button>
+        <button onClick="plusClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">+</button>
+        <button onClick="equalClick(event)" id="clear" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">EQUALS</button>
     </div>
 
 
