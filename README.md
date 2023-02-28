@@ -12,6 +12,7 @@ functionality
 3) clear option will delete all values from the input field for a start over
 4) after equal is pressed the answer as well as all previous answers are appended to the DOM for referance. 
 5) if the equation input is incorrect the app stops the post request and sends an alert to user ask to verify the input equation 
+6) after correct input the input field is cleared automatically 
 
 issues while building 
 1) wanted a clean layout for the buttons, used css grid to achieve this. 

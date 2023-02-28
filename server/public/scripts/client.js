@@ -134,9 +134,11 @@ function equalClick(event)
     answer:answer,}
     console.log(equationForServer)
     console.log(equationForServer)
+    document.querySelector('#viewer').value = ''
     axios.post('/equations',equationForServer).then((response)=>{
         getEquations()
     })
+    
 }
 
 
