@@ -111,7 +111,7 @@ function getEquations() {
         console.log(response.data[0])
         for(let i in response.data){
             let divElm = document.querySelector('#outputDiv')
-            divElm.innerHTML += `<br> <div onClick="addBackInput(event)">${response.data[i].equation} = ${response.data[i].answer}</div>`
+            divElm.innerHTML += `<br> <div id="${i}" onClick="addBackInput(event)">${response.data[i].equation} = ${response.data[i].answer}</div>`
             
         }
     }).catch((error)=>{
@@ -156,8 +156,9 @@ axios.delete('/equations')
     .then(() => document.querySelector('#outputDiv').innerHTML = 'History Cleared');}
 
 function addBackInput(event){
-    let addBack = document.querySelector('#outputDiv').children[1].innerHTML.split(' =')[0]
-    console.log(addBack)
+    //let addBack = document.querySelector('#outputDiv').children//[1].innerHTML.split(' =')[0]
+    let addBack = event.target.innerHTML.split(' =')[0]
+   // console.log(addBack)
     //+= over = in case user wants to add to a equation already typed. 
     document.querySelector('#viewer').value += " " +addBack
 
