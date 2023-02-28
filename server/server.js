@@ -10,8 +10,7 @@ const port = process.env.PORT || 5001
 //show where files are stored
 app.use(express.static('server/public'))
 
-let equations = [{equation:'test',
-answer:'test'}, ]
+let equations = [ ]
 
 app.get('/equations', (req, res)=>{
     res.send(equations)
@@ -20,8 +19,12 @@ app.get('/equations', (req, res)=>{
 
   app.post('/equations',(req, res)=>{
     let equationToAdd = req.body
-    console.log(equationToAdd, 'to add here')
-    equations.push(equationToAdd)
+    console.log(eval(equationToAdd.equation),'answer')
+    console.log(equationToAdd.equation,'question')
+    let question = equationToAdd.equation
+    let evaluate = eval(equationToAdd.equation)
+    //equations.push(equationToAdd)
+    equations.push({equation:question,answer:evaluate})
     res.sendStatus(201)
     console.log(equations)
   })

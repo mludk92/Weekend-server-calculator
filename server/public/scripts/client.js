@@ -111,7 +111,7 @@ function getEquations() {
         console.log(response.data[0])
         for(let i in response.data){
             let divElm = document.querySelector('#outputDiv')
-            divElm.innerHTML += `<br> ${Number(i)+1})  ${response.data}`
+            divElm.innerHTML += `<br> ${Number(i)+1})  ${response.data[i].equation} = ${response.data[i].answer}`
             
         }
     }).catch((error)=>{
