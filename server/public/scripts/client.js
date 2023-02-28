@@ -2,17 +2,13 @@ console.log('sourced in ')
 
 
 function divClick(event){
-    console.log('/')
+    console.log(' / ')
     document.querySelector('#viewer').value += '/'
 
 }
 function multClick(event){
-    console.log('*')
+    console.log(' * ')
     document.querySelector('#viewer').value += '*'
-}
-function minClick(event){
-    console.log('-')
-    document.querySelector('#viewer').value += '-'
 }
 function sevClick(event){
     console.log('7')
@@ -64,13 +60,14 @@ function dotClick(event)
 }
 function plusClick(event)
 {
-    console.log('+')
+    console.log(' + ')
     document.querySelector('#viewer').value += '+'
 }
 function equalClick(event)
 {
     console.log('=')
-    document.querySelector('#viewer').value += '=' // will need this to send values to somewhare 
+    //document.querySelector('#viewer').value += '=' // will need this to send values to somewhare
+    console.log(eval(document.querySelector('#viewer').value))
 }
 function clearClick(event)
 {
@@ -78,4 +75,44 @@ function clearClick(event)
     document.querySelector('#viewer').value = ''
 }
 
+// function minClick(event){
+//     console.log(' - ')
+//     document.querySelector('#viewer').value += ' - '
+// }
+
+// function negClick(event) {
+//     document.querySelector('#viewer').value += ' -'
+// }
+
+const button = document.querySelector(".minOrNeg");
+let clickTimer = 0;
+button.addEventListener(
+    "click",
+    function () {
+        clearTimeout(clickTimer);
+        clickTimer = setTimeout(function () {
+            document.querySelector('#viewer').value += ' - '
+            clickTimer = 0;
+        }, 250);
+    },
+    false
+);
+button.addEventListener(
+    "dblclick",
+    function () {
+        clearTimeout(clickTimer);
+        document.querySelector('#viewer').value += ' -'
+    },
+    false
+);
+
 console.log(document.querySelector('#viewer').value)
+
+let test = ['+']
+
+console.log(test[0])
+
+// see a potental break for neg numbers since i am using spaces to split my operators 
+
+
+console.log(eval(input.value)) // this is the best way

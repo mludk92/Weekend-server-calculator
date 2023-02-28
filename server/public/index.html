@@ -11,13 +11,13 @@
     <header> Server Side Calculator</header>
     <br>
     <br>
-    <input id="viewer"type="text"><br>
+    <input id="viewer"type="text"> <br>
     <button onClick="clearClick(event)" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'" id="clear">CLEAR</button>
     
     <div class="calculator-grid">       
         <button onClick="divClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">/</button>
         <button onClick="multClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">*</button>
-        <button onClick="minClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">-</button>
+        <button class="minOrNeg" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">-</button>
         <button onClick="sevClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">7</button>
         <button onClick="eightClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">8</button>
         <button onClick="nineClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">9</button>
@@ -32,7 +32,7 @@
         <button onClick="plusClick(event)" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">+</button>
         <button onClick="equalClick(event)" id="clear" onMouseOver="this.style.color='lightgreen'" onMouseOut="this.style.color='black'">EQUALS</button>
     </div>
-
+    <div id="neg">Double Click - for Negitive</div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scripts/client.js" charset="utf-8"></script>   
