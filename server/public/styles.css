@@ -17,15 +17,13 @@ input{
     margin-top: 3px;
     font-size: large;
 }
-#clear{
+#clear {
     display: grid;
     margin: auto;
     width: 225px;
     height: 50px;
     font-size: 40px;
-    
-    
-    
+   
 }
 
 .calculator-grid {
@@ -43,7 +41,5 @@ grid-template-rows:repeat(5, 50px);
     background-color: rbga(255, 255, 255, 0.75);
     }
   
-.calculator-grid > button:hover {
-    background-color: #544c4e;
-}
+
 
