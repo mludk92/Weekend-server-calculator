@@ -6,7 +6,7 @@ app.use(express.json()); // not having this causes req.body to return undefined.
 // Heroku assigns us a unique PORT 
 // use 5001 for local host devolopment 
 const port = process.env.PORT || 5001
-
+var stringMath = require('string-math')
 //show where files are stored
 app.use(express.static('server/public'))
 
@@ -19,10 +19,10 @@ app.get('/equations', (req, res)=>{
 
   app.post('/equations',(req, res)=>{
     let equationToAdd = req.body
-    console.log(eval(equationToAdd.equation),'answer')
+    console.log(stringMath(equationToAdd.equation),'answer')
     console.log(equationToAdd.equation,'question')
     let question = equationToAdd.equation
-    let evaluate = eval(equationToAdd.equation)
+    let evaluate = stringMath(equationToAdd.equation)
     //equations.push(equationToAdd)
     equations.push({equation:question,answer:evaluate})
     res.sendStatus(201)

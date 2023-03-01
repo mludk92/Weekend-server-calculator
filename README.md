@@ -14,7 +14,9 @@ functionality
 5) if the equation input is incorrect the app stops the post request and sends an alert to user ask to verify the input equation 
 6) after correct input the input field is cleared automatically 
 7) a clear history button which will delete the history from the server and clear the previous result so not loaded on refresh of page. 
-8) previous results can be click, and the equation clicked on will append back to the input field for reuse. 
+8) previous results can be click, and the equation clicked on will append back to the input field for reuse.
+ 
+
 
 issues while building 
 1) wanted a clean layout for the buttons, used css grid to achieve this. 
@@ -27,4 +29,16 @@ issues while building
     -- i was debating about doing a similar double click for clear which would empty the array of previous values on the server, but thought a real user may not like this. 
 3) tried to set up hovers in css but found it easier to do this with inline html 
 4) found the built in equation eval which very simply calculates the value of string 
+5) after building realized i was not supposed to eval() to solve the equations. after spending way to much time trying to find a way to 
+do split() on the intial string and sending this through some very lengthy forloops i decided to research libaries which could do the same thing as eval() and caculating strings but 
+with using the function. 
+i ended up finding a libary called stringMath 
+-----------------------------------------------------------------------------------------------------------------
+string-math is a module (function) that computes the [Number] result from the [String] arithmetical formula.
 
+It does not use eval()
+It uses regular expressions to parse [String] formulas "2+2" into [Number] formulas 2+2. Then it is performed as the common JavaScript arithmetic operation.
+-----------------------------------------------------------------------------------------------------------------
+to get this to work npm install string-math is run on the server, and the server file needs to require('string-math')
+i was then able to replace eval() with stringMath() and keep all functionality.
+Works beautifully ! 
