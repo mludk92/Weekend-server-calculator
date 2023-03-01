@@ -42,3 +42,4 @@ It uses regular expressions to parse [String] formulas "2+2" into [Number] formu
 to get this to work npm install string-math is run on the server, and the server file needs to require('string-math')
 i was then able to replace eval() with stringMath() and keep all functionality.
 Works beautifully ! 
+https://www.npmjs.com/package/string-math?activeTab=readme
