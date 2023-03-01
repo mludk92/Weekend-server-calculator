@@ -3,11 +3,11 @@ console.log('sourced in ')
 
 function divClick(event){
     console.log(' / ')
-    document.querySelector('#viewer').value += '/'
+    document.querySelector('#viewer').value += ' / '
 }
 function multClick(event){
     console.log(' * ')
-    document.querySelector('#viewer').value += '*'
+    document.querySelector('#viewer').value += ' * '
 }
 function sevClick(event){
     console.log('7')
