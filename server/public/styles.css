@@ -1,6 +1,7 @@
 body{ margin: 0;
     background: linear-gradient(to left, rgb(128, 128, 170), rgb(81, 77, 77));
     background-attachment: fixed;
+    padding-top: 20px;
    
 }
 
@@ -49,8 +50,14 @@ color:white;
   }
 #outputDiv{
     font-size: 35px;
-    padding-left: 100px;
+   
     color:white;
+    background-color: rgb(179, 177, 177) ;
+    margin-left: 100px;
+    padding-left: 10px;
+    margin-right: 890px;
+    border-style:outset;
+    border-top-style: none;
 }
 
 #history{
@@ -61,5 +68,20 @@ color:white;
     border-color: white;
     border-style:outset;
 
+}
+
+#viewer{
+    background-color: lightgray;
+    border-style: solid;
+    border-radius: 35%;
+    max-width: 800px;
+    max-height: 200px;
+    height: 100px;
+    font-size: 30px;
+    font-style:oblique;
+    color:rgb(0, 88, 88);
+    text-shadow:1px 1px 2px  rgb(245, 156, 233);
+    overflow:scroll;
+    
 }
 
